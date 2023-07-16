@@ -22,7 +22,7 @@ body {
 
 .box {
     position: relative;
-    width: 400px;
+    width: 40vw;
     height: 400px;
     backdrop-filter: blur(15px);
     border-radius: 50%;
@@ -71,6 +71,7 @@ body {
 #hr {
     margin: 160px;
     padding: 160px;
+
 }
 
 .min,
@@ -95,29 +96,34 @@ body {
 
 
 #hr::after {
-    content: '';
-    position: absolute;
+    content: "";
+    position: relative;
     background: #ff4566;
     width: 8px;
     height: 80px;
     border-radius: 6px;
+    z-index: 10;
+    top: -3vw;
 }
 
 #mn::after {
     content: '';
-    position: absolute;
+    position: relative;
     background: #fff;
     width: 4px;
     height: 90px;
     border-radius: 6px;
     z-index: 12;
+    top: -3.5vw;
 }
 
 #sc::after {
     content: '';
-    position: absolute;
+    position: relative;
     background: #fff;
     width: 2px;
     height: 160px;
     border-radius: 6px;
+    z-index: 15;
+    top: -5vw;
 }
