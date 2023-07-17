@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    font-size: calc(100vw / 1920 * 10);
+
+    @media (max-width: 1024px) {
+        font-size: calc(100vw / 768 * 10);
+    }
+
+    @media (max-width: 767px) {
+        font-size: calc(100vw / 500 * 10);
+    }
+
+    @media (max-width: 500px) {
+        font-size: calc(100vw / 360 * 10);
+    }
+}
+
 body {
     position: relative;
     width: 100%;
@@ -22,12 +38,12 @@ body {
 
 .box {
     position: relative;
-    width: 40vw;
-    height: 400px;
+    width: 40rem;
+    height: 40rem;
     backdrop-filter: blur(15px);
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border: 0.1rem solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
 }
 
 .clock {
@@ -38,20 +54,20 @@ body {
     bottom: 10px;
     background: radial-gradient(transparent, rgba(255, 255, 255, 0.06)), url('./jpg/clock.png');
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    border: 0.1rem solid rgba(255, 255, 255, 0.07);
     backdrop-filter: blur(25px);
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2)
 }
 
 .clock::after {
     position: relative;
     content: '';
-    width: 16px;
-    height: 16px;
+    width: 1.6rem;
+    height: 1.6rem;
     border-radius: 50%;
     background: #fff;
     z-index: 1000;
@@ -67,30 +83,30 @@ body {
 }
 
 
-.hour,
+/* .hour,
 #hr {
-    margin: 160px;
-    padding: 160px;
+    margin: 16rem;
+    padding: 16rem;
 
 }
 
 .min,
 #mn {
-    margin: 190px;
-    padding: 190px;
+    margin: 19rem;
+    padding: 19rem;
 }
 
 .sec,
 #sc {
-    margin: 230px;
-    padding: 230px;
-}
+    margin: 23rem;
+    padding: 23rem;
+} */
 
 #hr,
 #mn,
 #sc {
     display: flex;
-    justify-content: absolute;
+    justify-content: center;
     border-radius: 50%;
 }
 
@@ -99,31 +115,31 @@ body {
     content: "";
     position: relative;
     background: #ff4566;
-    width: 8px;
-    height: 80px;
-    border-radius: 6px;
+    width: 0.8rem;
+    height: 8rem;
+    border-radius: 0.6rem;
     z-index: 10;
-    top: -3vw;
+    top: 4rem;
 }
 
 #mn::after {
     content: '';
     position: relative;
     background: #fff;
-    width: 4px;
-    height: 90px;
-    border-radius: 6px;
+    width: 0.4rem;
+    height: 11rem;
+    border-radius: 0.6rem;
     z-index: 12;
-    top: -3.5vw;
+    top: -5rem;
 }
 
 #sc::after {
     content: '';
     position: relative;
     background: #fff;
-    width: 2px;
-    height: 160px;
-    border-radius: 6px;
+    width: 0.2rem;
+    height: 17rem;
+    border-radius: 0.6rem;
     z-index: 15;
-    top: -5vw;
+    top: -7rem;
 }
