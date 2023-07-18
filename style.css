@@ -8,7 +8,7 @@
     font-size: calc(100vw / 1920 * 10);
 
     @media (max-width: 1024px) {
-        font-size: calc(100vw / 768 * 10);
+        font-size: calc(100vw / 768 * 5);
     }
 
     @media (max-width: 767px) {
@@ -29,11 +29,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
 .container {
-    position: relative;
+    /* position: relative; */
+
+
 }
 
 .box {
@@ -142,4 +145,85 @@ body {
     border-radius: 0.6rem;
     z-index: 15;
     top: -7rem;
+}
+
+.box-two {
+
+    padding: 2rem;
+    font-size: 20rem;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    backdrop-filter: blur(20px);
+    border-radius: 5rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.07);
+    background: radial-gradient(transparent, rgba(255, 255, 255, 0.06));
+}
+
+.box-two::after {
+    content: '';
+    border-radius: 5rem;
+    border: 0.1rem solid #ff4566;
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    right: -1.5rem;
+    bottom: -1.5rem;
+    backdrop-filter: blur(15px);
+    border: 0.1rem solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+
+}
+
+.count_day {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.count_day_value {
+    margin: auto;
+    line-height: 0;
+}
+
+.count_day_text {
+    font-size: 0.2em;
+}
+
+.count_day_separator {}
+
+.count_hours {
+    display: flex;
+    flex-direction: column;
+}
+
+.count_hours_value {}
+
+.count_hours_text {
+    font-size: 0.2em;
+}
+
+.count_min {
+    display: flex;
+    flex-direction: column;
+}
+
+.count_min_value {}
+
+.count_min_text {
+    font-size: 0.2em;
+}
+
+.count_sec {
+    display: flex;
+    flex-direction: column;
+}
+
+.count_sec_value {}
+
+.count_sec_text {
+    font-size: 0.2em;
 }
