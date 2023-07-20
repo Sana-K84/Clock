@@ -5,18 +5,18 @@
 }
 
 :root {
-    font-size: calc(100vw / 1920 * 10);
+    font-size: calc(100vw / 1920 * 15);
 
     @media (max-width: 1024px) {
-        font-size: calc(100vw / 768 * 5);
+        font-size: calc(100vw / 768 * 6.5);
     }
 
     @media (max-width: 767px) {
-        font-size: calc(100vw / 500 * 10);
+        font-size: calc(100vw / 500 * 5);
     }
 
     @media (max-width: 500px) {
-        font-size: calc(100vw / 360 * 10);
+        font-size: calc(100vw / 360 * 3);
     }
 }
 
@@ -31,6 +31,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    font-size: 7em;
 
 }
 
@@ -38,15 +39,16 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-
-
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
 }
 
 .box-left {
 
 
     padding: 2rem;
-    font-size: 15rem;
+    /* font-size: 15rem; */
     display: flex;
     justify-content: center;
 
@@ -61,13 +63,16 @@ body {
 
 
 .box {
-    position: relative;
-    width: 40rem;
-    height: 40rem;
+    position: absolute;
+
+    left: 50%;
+    transform: translate(-50%, 15%);
+    width: 30rem;
+    height: 30rem;
     backdrop-filter: blur(15px);
     border-radius: 50%;
     border: 0.1rem solid rgba(255, 255, 255, 0.07);
-    margin: 0 13rem;
+
 }
 
 .clock {
@@ -140,10 +145,10 @@ body {
     position: relative;
     background: #ff4566;
     width: 0.8rem;
-    height: 8rem;
+    height: 7rem;
     border-radius: 0.6rem;
     z-index: 10;
-    top: 4rem;
+    top: 3.5rem;
 }
 
 #mn::after {
@@ -151,7 +156,7 @@ body {
     position: relative;
     background: #fff;
     width: 0.4rem;
-    height: 11rem;
+    height: 10rem;
     border-radius: 0.6rem;
     z-index: 12;
     top: -5rem;
@@ -162,16 +167,16 @@ body {
     position: relative;
     background: #fff;
     width: 0.2rem;
-    height: 17rem;
+    height: 13rem;
     border-radius: 0.6rem;
     z-index: 15;
-    top: -7rem;
+    top: -5rem;
 }
 
 .box-two {
 
     padding: 2rem;
-    font-size: 15rem;
+    /* font-size: 15rem; */
     display: flex;
     justify-content: center;
 
@@ -184,6 +189,7 @@ body {
 }
 
 .wrapper {
+    margin-top: 7rem;
     border-radius: 6rem;
     padding: 1rem;
     display: flex;
@@ -191,6 +197,7 @@ body {
     backdrop-filter: blur(15px);
     border: 0.1rem solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+    /* font-size: 5em; */
 }
 
 /* .box-two::after {
