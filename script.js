@@ -32,9 +32,13 @@ setInterval(() => {
 
     const tisDay = new Date('May 04 2024') - date;
     console.log(tisDay)
-    dayTo.innerHTML = Math.floor(tisDay / 1000 / 60 / 60 / 24);
-    hoursTo.innerHTML = 22;
-    minutesTo.innerHTML = 22;
-    secondsTo.innerHTML = 22;
+    let valueDay = Math.floor(tisDay / 1000 / 60 / 60 / 24);
+    let valueHours = Math.floor(tisDay / 1000 / 60 / 60 % 24);
+    let valueMinutes = Math.floor(tisDay / 1000 / 60 % 60);
+    let valueSeconds = Math.floor(tisDay / 1000 % 60);
+    dayTo.innerHTML = valueDay < 10 ? '0' + valueDay : valueDay;
+    hoursTo.innerHTML = valueHours < 10 ? '0' + valueHours : valueHours;
+    minutesTo.innerHTML = valueMinutes < 10 ? '0' + valueMinutes : valueMinutes;
+    secondsTo.innerHTML = valueSeconds < 10 ? '0' + valueSeconds : valueSeconds;
 });
 
