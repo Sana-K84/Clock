@@ -13,6 +13,21 @@ const hoursTo = document.querySelector(".count_hours_value");
 const minutesTo = document.querySelector(".count_min_value");
 const secondsTo = document.querySelector(".count_sec_value");
 
+const dayText = document.querySelector(".count_day_text");
+const hursText = document.querySelector(".count_hours_text");
+const minText = document.querySelector(".count_min_text");
+const secText = document.querySelector(".count_sec_text");
+
+
+
+
+function declOfNum(number, titles) {
+    let cases = [2, 0, 1, 1, 1, 2];
+    return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+}
+
+
+
 
 setInterval(() => {
     let date = new Date();
@@ -40,5 +55,11 @@ setInterval(() => {
     hoursTo.innerHTML = valueHours < 10 ? '0' + valueHours : valueHours;
     minutesTo.innerHTML = valueMinutes < 10 ? '0' + valueMinutes : valueMinutes;
     secondsTo.innerHTML = valueSeconds < 10 ? '0' + valueSeconds : valueSeconds;
+
+    dayText.innerHTML = declOfNum(valueDay, ['день', 'дня', 'дней']);
+    hursText.innerHTML = declOfNum(valueHours, ['час', 'часа', 'часов']);
+    minText.innerHTML = declOfNum(valueMinutes, ['минута', 'минуты', 'минут']);
+    secText.innerHTML = declOfNum(valueSeconds, ['секунда', 'секунды', 'секунд']);
+
 });
 
